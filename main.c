@@ -13,11 +13,10 @@ int main(){
 		{  7, -1,  3, -1,  1,  8, -1, -1, -1 }
 	};
 	if(solve(board, 0, 0)){
-		printf("Solved!\n");
+		print_board(board);
 	}
 	else{
 		printf("Unsolvable\n");
 	}
-	print_board(board);
 	return 0;
 }

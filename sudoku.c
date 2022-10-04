@@ -6,12 +6,12 @@ int solve(int board[9][9], int x, int y) {
 	 * Assumes the input is valid
 	 * Solves in-place, restores original array if no solution was found
 	*/
-	if(x == 8 && y == 8 && board[x][y] != 0){
-		return 1;
-	}
 	if(x>8){
 		x = 0;
 		y++;
+	}
+	if(y>8){
+		return 1;
 	}
 	if(board[x][y] != -1){
 		return solve(board, x+1, y);
@@ -55,7 +55,6 @@ int isLegal(int board[9][9], int x, int y, int n){
 
 void print_board(int board[9][9]){
 	int i, j;
-	printf("--------------------------\n");
 	for(i = 0; i < 9; ++i){
 		for(j = 0; j < 9; ++j){
 			if(board[i][j] != -1){
@@ -65,5 +64,4 @@ void print_board(int board[9][9]){
 		}
 		printf("\n");
 	}
-	printf("--------------------------\n");
 }
