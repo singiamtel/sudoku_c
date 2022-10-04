@@ -12,7 +12,7 @@ make
 
 ![Screenshot](screenshotd.png)
 
-There is no validation of the input or the output, so you can make mistakes and break the program.
+There is no validation of the input or the output, and invalid boards will most likely break the program.
 
 ## Implementation details
 
